@@ -1,0 +1,8 @@
+.h5p-placeholder {
+    color: #6c757d;
+    width: 100%;
+    word-break: break-all;
+    height: 360px;
+    cursor: pointer;
+    background: url(pix/icon-white.png) center center / 100px auto no-repeat #6c757d;
+}

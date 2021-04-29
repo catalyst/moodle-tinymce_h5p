@@ -1,0 +1,23 @@
+.form-check-input
+{
+    vertical-align: middle;
+}
+
+.moodlebutton {
+    font-size: 1.2em;
+    padding: 3px 3px 3px 1.5em;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    background: url(pix/search.png) .2em .3em no-repeat;
+}
+
+body
+{
+    line-height: 22.5px;
+}
+
+.alert-warning
+{
+    background-color: #e0787e;
+    padding-left: 5px;
+}
