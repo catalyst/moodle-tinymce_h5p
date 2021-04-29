@@ -28,46 +28,31 @@ $PAGE->set_context(context_system::instance());
 $PAGE->set_url('/lib/editor/tinymce/plugins/h5p/tinymce/dialog.php');
 $stringmanager = get_string_manager();
 $editor = get_texteditor('tinymce');
-$plugin = $editor->get_plugin('h5p');
-$htmllang = get_html_lang();
-header('Content-Type: text/html; charset=utf-8');
-header('X-UA-Compatible: IE=edge');
-
 require_once($CFG->libdir.'/formslib.php');
 require_once($CFG->libdir.'/moodlelib.php');
 require_once($CFG->dirroot.'/lib/filelib.php');
 require_once($CFG->dirroot.'/mod/hvp/mod_form.php');
 
+/**
+ *  Define data for the template rendering inside
+ *  templates/template_data.mustache file.
+ */
+$mydata = array(
+     'getTinymceBaseUrl' => $editor->get_tinymce_base_url()->out(),
+     'htmllang' => get_html_lang(),
+     'elementid' => 'id_element',
+     'canUploadAndEmbed' => '1',
+     'canUpload' => '1',
+     'canEmbed' => '1',
+     'component' => 'tinymce_h5p',
+     'cfgWwwroot' => $CFG->wwwroot,
+     'addParagraphs' => '1',
+     'CSS' => array(
+         'CONTENTWARNING' => 'tinymce_h5p_contentwarning',
+         'URLWARNING' => 'tinymce_h5p_warning',
+         'H5PBROWSER' => 'openh5pbrowser'
+     )
+);
+// Render the template and put it right in the body.
+echo $OUTPUT->render_from_template('tinymce_h5p/template_data', $mydata);
 ?>
-<!DOCTYPE html>
-<html <?php echo $htmllang ?>
-<head>
-    <title>{#h5p.desc}</title>
-    <script type="text/javascript" src="<?php echo $editor->get_tinymce_base_url(); ?>/tiny_mce_popup.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-<?php
-    /**
-     *  Define data for the template rendering inside
-     *  templates/template_data.mustache file.
-     */
-    $mydata = array(
-         'elementid' => 'id_element',
-         'canUploadAndEmbed' => '1',
-         'canUpload' => '1',
-         'canEmbed' => '1',
-         'component' => 'tinymce_h5p',
-         'cfgWwwroot' => $CFG->wwwroot,
-         'addParagraphs' => '1',
-         'CSS' => array(
-             'CONTENTWARNING' => 'tinymce_h5p_contentwarning',
-             'URLWARNING' => 'tinymce_h5p_warning',
-             'H5PBROWSER' => 'openh5pbrowser'
-         )
-    );
-    // Render the template and put it right in the body.
-    echo $OUTPUT->render_from_template('tinymce_h5p/template_data', $mydata);
-?>
-</body>
-</html>
