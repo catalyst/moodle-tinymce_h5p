@@ -17,8 +17,8 @@
             var openH5PDialog = function () {
                 ed.windowManager.open({
                     file : ed.getParam("moodle_plugin_base") + 'h5p/dialog.php',
-                    width : 520 + ed.getLang('example.delta_width', 0),
-                    height : 250 + ed.getLang('example.delta_height', 0),
+                    width : 520,
+                    height : 250,
                     inline : 1
                 }, {
                     plugin_url : url

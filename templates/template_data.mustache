@@ -2,7 +2,6 @@
 <html {#htmllang}>
 <head>
     <title>{#h5p.desc}</title>
-    <script type="text/javascript" src="{#getTinymceBaseUrl}/tiny_mce_popup.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -38,7 +37,7 @@
         html = '<a class="moodlebutton" id="' + id + '_link" href="#" ' +
                'onclick="openBrowser(\'' + id + '\',\'' + target_form_element +
                '\', \'' + type + '\',\'' + option + '\');' +
-               'displayWarning(\'.alert-warning\', \'none\');" onmousedown="return false;">';
+               'displayWarning(\'.alert-warning\', \'none\');return false;" onmousedown="return false;">';
         html += '<span id="' + id + '">{{# str }} browserepositories, tinymce_h5p {{/ str }}</span>';
         html += '</a>';
 
