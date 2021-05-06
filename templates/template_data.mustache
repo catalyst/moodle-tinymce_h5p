@@ -27,13 +27,12 @@
         }
     }
 
-    var getH5PBrowserHTML = function(id, target_form_element, type, prefix) {
-        var option = prefix + "_" + type + "_browser_callback", cb, html;
-        cb = tinyMCEPopup.getParam(option, tinyMCEPopup.getParam("file_browser_callback"));
-
-        if (!cb)
+    var getH5PBrowserHTML = function(id, target_form_element, type) {
+        var option = "h5p_tinymce_browser_callback", html;
+        if (!tinyMCEPopup.getParam(option, tinyMCEPopup.getParam("file_browser_callback")))
             return "";
 
+        parent.M.editor_tinymce.filepicker = parent.h5p_tinymce_browser_callback;
         html = '<a class="moodlebutton" id="' + id + '_link" href="#" ' +
                'onclick="openBrowser(\'' + id + '\',\'' + target_form_element +
                '\', \'' + type + '\',\'' + option + '\');' +

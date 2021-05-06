@@ -19,7 +19,8 @@ var H5PDialog = {
 
         tinyMCEPopup.resizeToInnerSize();
         // Setup browse button.
-        document.getElementById('srcbrowsercontainer').innerHTML = getH5PBrowserHTML('srcbrowser', 'h5pfile', 'file', 'theme_advanced_image'); // Moodle hack
+        document.getElementById('srcbrowsercontainer').innerHTML =
+            getH5PBrowserHTML('srcbrowser', 'h5pfile', 'h5p');
         document.getElementById('h5pfile').style.width = '500px';
 
         // File URL without parameters.

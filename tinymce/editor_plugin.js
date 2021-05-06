@@ -64,3 +64,37 @@
 
     tinymce.PluginManager.add('h5p', tinymce.plugins.H5P);
 })();
+
+/**
+ * Opens the File Picker and applies the filter for H5P files.
+ * Overrides the standard filepicker function.
+ * In addition to the existing types 'media', 'file' and 'image
+ * it introduces a new 'h5p' type.
+ */
+var h5p_tinymce_browser_callback = function(target_id, url, type, win) {
+    YUI().use('core_filepicker', function (Y) {
+        var editor_id = tinyMCE.selectedInstance.editorId;
+        if (editor_id == 'mce_fullscreen') {
+            editor_id = tinyMCE.selectedInstance.settings.elements;
+        }
+        var options = null;
+        if (type == 'media') {
+            // When media button clicked.
+            options = M.editor_tinymce.filepicker_options[editor_id]['media'];
+        } else if (type == 'file') {
+            // When link button clicked.
+            options = M.editor_tinymce.filepicker_options[editor_id]['link'];
+        } else if (type == 'image') {
+            // When image button clicked.
+            options = M.editor_tinymce.filepicker_options[editor_id]['image'];
+        } else if (type == 'h5p') {
+            // When image button clicked.
+            options = M.editor_tinymce.filepicker_options[editor_id]['h5p'];
+        }
+
+        options.formcallback = M.editor_tinymce.filepicker_callback;
+        options.editor_target = win.document.getElementById(target_id);
+
+        M.core_filepicker.show(Y, options);
+    });
+};
