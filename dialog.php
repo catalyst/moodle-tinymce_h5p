@@ -27,7 +27,6 @@ require(__DIR__ . '/../../../../../config.php');
 
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url('/lib/editor/tinymce/plugins/h5p/tinymce/dialog.php');
-$stringmanager = get_string_manager();
 $editor = get_texteditor('tinymce');
 
 /**

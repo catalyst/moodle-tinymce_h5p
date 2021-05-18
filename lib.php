@@ -27,9 +27,22 @@ class tinymce_h5p extends editor_tinymce_plugin {
     /** @var array list of buttons defined by this plugin */
     protected $buttons = array('tinymce_h5p');
 
-    protected function update_init_params(array &$params, context $context, array $options = null) {
+    /**
+     * Implements the required abstract update_init_params() method
+     * from editor_tinymce_plugin.
+     *
+     * Adds H5P button at the end of the last row of buttons
+     * and registers the plugin JS module.
+     *
+     * @param array $params TinyMCE init parameters array
+     * @param context $context Context where editor is being shown
+     * @param array $options Options for this editor
+     */
+    protected function update_init_params(array &$params, context $context,
+                                          array $options = null) {
         // Add button at the end
-        $this->add_button_after($params, $this->count_button_rows($params), 'tinymce_h5p');
+        $this->add_button_after($params, $this->count_button_rows($params),
+            'tinymce_h5p');
 
         // Add JS file, which uses default name.
         $this->add_js_plugin($params);
