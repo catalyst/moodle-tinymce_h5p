@@ -24,6 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2021041200;
+$plugin->version   = 2021060800;
+$plugin->release   = 2021060800;
 $plugin->requires  = 2020060900;
 $plugin->component = 'tinymce_h5p';
+$plugin->maturity  = MATURITY_STABLE;
