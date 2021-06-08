@@ -1,4 +1,8 @@
-# tinymce_h5p
+<a href="https://travis-ci.org/catalyst/moodle-tinymce_h5p">
+<img src="https://travis-ci.org/catalyst/moodle-tinymce_h5p.svg?branch=main">
+</a>
+
+https://moodle.org/plugins/tinymce_h5p
 
 H5P Plugin for TinyMCE Editor
 =============================
@@ -9,6 +13,7 @@ H5P Plugin for TinyMCE Editor
 * [Installation](#installation)
 * [Configuring](#configuring)
 * [Usage](#usage)
+* [Screenshot](#screenshot)
 * [Support](#support)
 * [License](#license)
 
@@ -31,6 +36,10 @@ The functionality of this button is similar to the H5P button in Atto text edito
 | Moodle 3.9+           | main       | 7.2   |
 
 ## Installation
+**Installing via Moodle plugin directory**
+
+The plugin can be installed via Moodle plugin directory:
+https://moodle.org/plugins/tinymce_h5p
 
 **Installing via uploaded ZIP file**
 
@@ -62,13 +71,17 @@ After files are placed in the correct directory the istallation can proceed in t
 
 ## Configuring
 
-After the plugin is installed it should be visible in _Site administration > Plugins > Text editors > TinyMCE HTML editor > General settings_.
+After the plugin is installed it should be visible in _Site administration > Plugins > Text editors > TinyMCE HTML editor > General settings_:
 
-By default the button is placed at the end of the lowest row of buttons in TinyMCE toolbar, which usually has more than one row.
+![tinymce_h5p plugin in the list of TinyMCE plugins](/pix/2021-06-08-plugin_001.png?raw=true)
 
-Therefore, in order to see the H5P button the _Toolbar Toggle_ must be clicked first in TinyMCE toolbar.
+By default the button is placed at the end of the lowest row of buttons in TinyMCE toolbar, which usually has more than one row. Therefore, in order to see the H5P button the _Toolbar Toggle_ must be clicked first in TinyMCE toolbar:
 
-It is possible to place TinyMCE at any position in any row. To do so you need to edit settings inside _Editor Toolbar_ text area, which can be accessed from _Site administration > Plugins > Text editors > TinyMCE HTML editor > General settings_ scrolling down to _Settings > Editor Toolbar_. Usually there are pre-filled lines corresponding to a default configuration. Each line of text is configuring a line of buttons in the editor toolbar. Placing the text value _tinymce_h5p_ inside the text controls the position of the button in the toolbar.
+![tinymce_h5p button in TinyMCE toolbar](/pix/2021-06-08-plugin_002.png?raw=true)
+
+It is possible to place TinyMCE at any position in any row. To do so you need to edit settings inside _Editor Toolbar_ text area, which can be accessed from _Site administration > Plugins > Text editors > TinyMCE HTML editor > General settings_ scrolling down to _Settings > Editor Toolbar_. Usually there are pre-filled lines corresponding to a default configuration. Each line of text is configuring a line of buttons in the editor toolbar. Placing the text value _tinymce_h5p_ inside the text controls the position of the button in the toolbar:
+
+![tinymce_h5p button in TinyMCE toolbar](/pix/2021-06-08-plugin_003.png?raw=true)
 
 ## Usage
 
@@ -81,6 +94,10 @@ The plugin dialog has a few other options:
 * **Allow download** checkbox will add the **Download** button to H5P content when it is displayed on the page to allow downloading the package by users.
 * **Embed button** checkbox will add the **Embed** button to H5P content when it is displayed on the page and provide the embed code to be used by 3rd parties.
 * **Copyright button* checkbox will add the **Copyright** button to H5P content when it is displayed on the page with the copyright information about H5P package.
+
+## Screenshot
+
+![tinymce_h5p button in TinyMCE toolbar](/pix/2021-06-08-plugin_004.png?raw=true)
 
 ## Support
 
