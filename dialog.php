@@ -29,10 +29,8 @@ $PAGE->set_context(context_system::instance());
 $PAGE->set_url('/lib/editor/tinymce/plugins/h5p/tinymce/dialog.php');
 $editor = get_texteditor('tinymce');
 
-/**
- *  Define data for the template rendering inside
- *  templates/template_data.mustache file.
- */
+// Define data for the template rendering inside
+// templates/template_data.mustache file.
 $mydata = array(
      'getTinymceBaseUrl' => $editor->get_tinymce_base_url()->out(),
      'htmllang' => get_html_lang(),
