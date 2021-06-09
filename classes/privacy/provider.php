@@ -18,7 +18,8 @@
  * Privacy Subsystem implementation for tinymce_h5p.
  *
  * @package    tinymce_h5p
- * @copyright  2021 Kateryna Degtyariova <katerynadegtyariova@catalyst-au.net>
+ * @author  2021 Kateryna Degtyariova <katerynadegtyariova@catalyst-au.net>
+ * @copyright  2021 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -29,7 +30,8 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Privacy Subsystem for tinymce_h5p implementing null_provider.
  *
- * @copyright  2021 Kateryna Degtyariova <katerynadegtyariova@catalyst-au.net>
+ * @author  2021 Kateryna Degtyariova <katerynadegtyariova@catalyst-au.net>
+ * @copyright  2021 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements \core_privacy\local\metadata\null_provider {

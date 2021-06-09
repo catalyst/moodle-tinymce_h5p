@@ -41,8 +41,9 @@
             // Process double-click on H5P element inside the editor.
             ed.onDblClick.add(function(ed, e) {
                 var n = ed.selection.getNode();
-                if (n.nodeName == 'DIV' && n.className == 'h5p-placeholder')
+                if (n.nodeName == 'DIV' && n.className == 'h5p-placeholder') {
                     openH5PDialog();
+                }
             });
         },
         /**

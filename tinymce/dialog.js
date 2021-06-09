@@ -5,7 +5,6 @@ var H5PDialog = {
      * @method preInit
      */
     preInit: function () {
-        var url;
         tinyMCEPopup.requireLangPack();
     },
 
@@ -15,7 +14,7 @@ var H5PDialog = {
      * @method init
      */
     init: function (ed) {
-        var f = document.forms[0], nl = f.elements, dom = ed.dom, n = ed.selection.getNode();
+        var f = document.forms[0], nl = f.elements, n = ed.selection.getNode();
 
         tinyMCEPopup.resizeToInnerSize();
         // Setup browse button.
@@ -92,7 +91,7 @@ var H5PDialog = {
      * @param {string} title - not used
      */
     insert: function (file, title) {
-        var ed = tinyMCEPopup.editor, t = this, f = document.forms[0];
+        var t = this, f = document.forms[0];
 
         // Hide all warnings.
         displayWarning('.alert-warning', 'none');
@@ -118,13 +117,14 @@ var H5PDialog = {
      * @method insertAndClose
      */
     insertAndClose: function () {
-        var ed = tinyMCEPopup.editor, f = document.forms[0], nl = f.elements, v, args = {}, el;
+        var ed = tinyMCEPopup.editor, f = document.forms[0], nl = f.elements, args = {}, el;
 
         tinyMCEPopup.restoreSelection();
 
         // Fixes crash in Safari.
-        if (tinymce.isWebKit)
+        if (tinymce.isWebKit) {
             ed.getWin().focus();
+        }
 
         tinymce.extend(args, {
             contenteditable: false,
@@ -133,12 +133,17 @@ var H5PDialog = {
 
         el = ed.selection.getNode();
         var opts_str = '';
-        if (nl.h5p_allow_download.checked)
+        if (nl.h5p_allow_download.checked) {
             opts_str += '?export=1';
-        if (nl.h5p_embed.checked)
+        }
+
+        if (nl.h5p_embed.checked) {
             opts_str += (opts_str.length ? '&amp;' : '?') + 'embed=1';
-        if (nl.h5p_copyright.checked)
+        }
+
+        if (nl.h5p_copyright.checked) {
             opts_str += (opts_str.length ? '&amp;' : '?') + 'copyright=1';
+        }
 
         if (el && el.nodeName == 'DIV' && el.className == 'h5p-placeholder') {
             ed.dom.setAttribs(el, args);

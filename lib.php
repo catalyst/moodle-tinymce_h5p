@@ -20,7 +20,8 @@ defined('MOODLE_INTERNAL') || die();
  * TinyMCE text editor integration version file.
  *
  * @package    tinymce_h5p
- * @copyright  2021 Kateryna Degtyariova <katerynadegtyariova@catalyst-au.net>
+ * @author  2021 Kateryna Degtyariova <katerynadegtyariova@catalyst-au.net>
+ * @copyright  2021 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class tinymce_h5p extends editor_tinymce_plugin {

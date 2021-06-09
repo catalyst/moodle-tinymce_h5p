@@ -18,7 +18,8 @@
  * Dialog for TinyMCE h5p plugin
  *
  * @package    tinymce_h5p
- * @copyright  2021 Kateryna Degtyariova <katerynadegtyariova@catalyst-au.net>
+ * @author  2021 Kateryna Degtyariova <katerynadegtyariova@catalyst-au.net>
+ * @copyright  2021 Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
