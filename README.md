@@ -49,7 +49,7 @@ https://moodle.org/plugins/tinymce_h5p
 
 **Installing via Git**
 
-    cd {your/moodle/dirroot}/lib/editors/tinymce/plugins
+    cd {your/moodle/dirroot}/lib/editor/tinymce/plugins
     git clone git@github.com:catalyst/tinymce_h5p.git h5p
     
 Afterwards, log in to your Moodle site as an admin and go to _Site administration >
@@ -65,7 +65,7 @@ to complete the installation from the command line.
 
 The plugin can be also installed by putting the plugin files into
 
-    {your/moodle/dirroot}/lib/editors/tinymce/plugins/h5p
+    {your/moodle/dirroot}/lib/editor/tinymce/plugins/h5p
 
 After files are placed in the correct directory the istallation can proceed in the same way as with **Installing via Git**
 
